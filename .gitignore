@@ -1,0 +1,64 @@
+# ===================================
+# Maven / Gradle Build Directories
+# ===================================
+target/
+build/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===================================
+# Spring Boot / DevTools
+# ===================================
+# DevTools restart cache
+target/.restart/
+
+# ===================================
+# Logs
+# ===================================
+*.log
+
+# ===================================
+# IDEs
+# ===================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.apt_generated/
+.factorypath
+.springBeans/
+.sts4-cache/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# ===================================
+# OS-specific
+# ===================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===================================
+# Temporary / editor swap / cache files
+# ===================================
+*.tmp
+*.swp
+*~
+.cache/
