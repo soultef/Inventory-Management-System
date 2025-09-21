@@ -14,6 +14,7 @@
   <description>Multi-module project for inventory management</description>
   <modules>
     <module>Product-Service</module>
+    <module>shared-lib</module>
   </modules>
 
   <!-- Common properties -->
