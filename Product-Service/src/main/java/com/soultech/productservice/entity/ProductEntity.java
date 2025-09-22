@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "products")
+@Table(name = "products", uniqueConstraints = @UniqueConstraint(columnNames = "name"))
 public class ProductEntity {
 
     @Id
@@ -12,11 +12,13 @@ public class ProductEntity {
     private  Long id;
 
 
+    @Column(nullable = false, unique = true)
     private String name;
 
-    @Column(length = 500)
+    @Column(length = 500, nullable = false)
     private String description;
 
+    @Column(nullable = false)
     private BigDecimal price;
 
     public Long getId() {

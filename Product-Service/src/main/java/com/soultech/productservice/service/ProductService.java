@@ -19,6 +19,11 @@ public class ProductService {
 
     }
 
+    public ProductDto createProduct(ProductDto productDto)
+    {
+
+    }
+
     public ProductDto getProductById(Long id) {
         return productRepository.findById(id)
                 .map(ProductMapper::toDto)
