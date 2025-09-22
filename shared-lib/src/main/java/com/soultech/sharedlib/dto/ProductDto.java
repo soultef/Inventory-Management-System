@@ -1,10 +1,16 @@
 package com.soultech.sharedlib.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 import java.math.BigDecimal;
 
 public class ProductDto {
 
+
+    @NotBlank(message = "Product name should have a name")
     private String name;
+
+    @NotBlank(message = "Product should have description")
     private String description;
     private BigDecimal price;
 
