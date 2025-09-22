@@ -17,8 +17,9 @@ public class ProductController {
     }
 
     @PostMapping("/add/product")
-    public void createProduct()
+    public ResponseEntity<String> createProduct(@RequestBody ProductDto productDto)
     {
+        return ResponseEntity.ok(productDto.toString() + " success message");
     }
 
     @GetMapping("/products")
