@@ -1,10 +1,20 @@
-package com.soultech.controller;
+package com.soultech.productservice.controller;
 
+import com.soultech.sharedlib.dto.ProductDto;
+import com.soultech.productservice.service.ProductService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
 public class ProductController {
+
+    private final ProductService productService;
+
+    public  ProductController(ProductService productService)
+    {
+        this.productService = productService;
+    }
 
     @PostMapping("/add/product")
     public void createProduct()
@@ -19,9 +29,9 @@ public class ProductController {
 
 
     @GetMapping("/product/{id}")
-    public String product(@PathVariable("id") long id)
-    {
-        return "<h1> This is a single product" + id +  "</h1>";
+    public ResponseEntity<ProductDto> getProduct(@PathVariable("id") Long id) {
+        ProductDto product = productService.getProductById(id); // May throw ProductNotFoundException
+        return ResponseEntity.ok(product);
     }
 
     @PutMapping("/update/{id}")

@@ -1,4 +1,4 @@
-package com.soultech.dto;
+package com.soultech.sharedlib.dto;
 
 import java.math.BigDecimal;
 
