@@ -1,7 +1,6 @@
-package com.soultech.entity;
+package com.soultech.productservice.entity;
 
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
 @Entity

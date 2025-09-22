@@ -1,6 +1,6 @@
-package com.soultech.repo;
+package com.soultech.productservice.repo;
 
-import com.soultech.entity.ProductEntity;
+import com.soultech.productservice.entity.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
